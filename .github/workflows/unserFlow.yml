@@ -19,3 +19,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: docker -v
+  docs:
+    needs: testing
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker -v
+  parallel:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker -v
